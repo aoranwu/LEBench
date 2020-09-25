@@ -889,7 +889,7 @@ void context_switch_test(struct timespec *diffTime) {
 
 int msg_size = -1;
 int curr_iter_limit = -1;
-#define sock "/TEST_DIR/socket"
+#define sock "/users/aoran/LEBench/TEST_DIR/socket"
 void send_test(struct timespec *timeArray, int iter, int *i) {
 	int retval;
 	int fds1[2], fds2[2];
@@ -1177,6 +1177,7 @@ int main(int argc, char *argv[])
 	/*            CONTEXT SWITCH             */
 	/*****************************************/
 	info.iter = BASE_ITER * 10;
+	//info.iter = 100;
 	info.name = "context siwtch";
 	one_line_test(fp, copy, context_switch_test, &info);
 
